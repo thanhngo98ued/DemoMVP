@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/dp_5"
+    android:background="@color/color_white">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHeight_percent="1"
+        app:layout_constraintWidth_percent="0.25">
+
+        <ImageView
+            android:id="@+id/imgWeather"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@mipmap/ic_launcher_round"
+            android:contentDescription="@null" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/textViewMax"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_5"
+        android:layout_marginLeft="@dimen/dp_5"
+        android:layout_marginTop="@dimen/dp_10"
+        app:layout_constraintStart_toEndOf="@+id/cardView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewTempMax"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_5"
+        android:layout_marginLeft="@dimen/dp_5"
+        app:layout_constraintBottom_toBottomOf="@id/textViewMax"
+        app:layout_constraintStart_toEndOf="@id/textViewMax"
+        app:layout_constraintTop_toTopOf="@id/textViewMax" />
+
+    <TextView
+        android:id="@+id/textViewTempMin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_5"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewMin"
+        app:layout_constraintLeft_toRightOf="@+id/textViewMin"
+        app:layout_constraintTop_toTopOf="@id/textViewMin" />
+
+    <TextView
+        android:id="@+id/textViewMin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_5"
+        android:layout_marginLeft="@dimen/dp_5"
+        android:layout_marginTop="@dimen/dp_10"
+        app:layout_constraintStart_toEndOf="@+id/cardView"
+        app:layout_constraintTop_toBottomOf="@+id/textViewMax" />
+
+    <TextView
+        android:id="@+id/textViewStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        app:layout_constraintLeft_toRightOf="@+id/cardView"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTempMin" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
